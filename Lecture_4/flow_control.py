@@ -2,17 +2,15 @@ operand_1 = input("Enter operand 1: ")
 operand_2 = input("Enter operand 2: ")
 action = input("Type +, -, /, or * to perform operation: ")
 
-list_of_actions = ['+', '-', '/', '*']
+list_of_actions = ['+', '-', '/', '*', '**', '//', '%']
 
 comparison_1 = ''
 comparison_2 = ''
 
 
 try:
-    if operand_1.isdigit():
-        operand_1 = int(operand_1)
-    else:
-        operand_1 = float(operand_1)
+    operand_1 = int(operand_1) if operand_1.isdigit() else float(operand_1)
+
 except Exception as error:
     print()
     print(f"Error: {error}.")
@@ -20,10 +18,8 @@ except Exception as error:
 
 
 try:
-    if operand_2.isdigit():
-        operand_2 = int(operand_2)
-    else:
-        operand_2 = float(operand_2)
+    operand_2 = int(operand_2) if operand_2.isdigit() else float(operand_2)
+
 except Exception as error:
     print()
     print(f"Error: {error}.")
@@ -32,7 +28,8 @@ except Exception as error:
 
 if action not in list_of_actions:
     print()
-    print("Action is not defined.\nPlease use:\n\t+ to add\n\t- to subtract\n\t/ to divide\n\t* to multiply")
+    print("Action is not defined.\nPlease use:\n\t+ to add\n\t- to subtract\n\t/ to divide\n\t* to multiply \
+          \n\t** to power\n\t// to use floor division\n\t% to use modulus division")
 
 elif action == '+':
     print()
@@ -57,8 +54,21 @@ elif action == '*':
     result = operand_1 * operand_2
     print(f"Multiplication result is {result}")
 
-else:
-    pass
+elif action == '**':
+    print()
+    result = operand_1 ** operand_2
+    print(f"Power result is {result}")
+
+elif action == '//':
+    print()
+    result = operand_1 // operand_2
+    print(f"Floor division result is {result}")
+
+elif action == '%':
+    print()
+    result = operand_1 % operand_2
+    print(f"Modulus division result is {result}")
+
 
 if action not in list_of_actions:
     comparison_1 = 'Unable to compare operands.'
