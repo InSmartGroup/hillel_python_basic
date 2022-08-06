@@ -29,5 +29,3 @@ print()
 print(f"Uppercase input: {user_input.upper()}")
 print(f"Indexes of spaces: {', '.join(str(i) for i in spaces)}")
 print(f"3-in-a-row digits: {', '.join(str(i) for i in digits)}")
-
-
