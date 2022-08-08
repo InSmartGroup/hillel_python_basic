@@ -24,6 +24,7 @@ for index, letter in enumerate(user_input):
                 print("The loop has been processed.")
     except IndexError as error:
         print(f"The loop has been terminated: {error}.")
+        continue
 
 print()
 print(f"Uppercase input: {user_input.upper()}")
