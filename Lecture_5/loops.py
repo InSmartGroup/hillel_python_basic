@@ -9,7 +9,7 @@ for index, letter in enumerate(user_input):
     if letter == " ":
         spaces.append(index)
 
-    if letter in "aouei":
+    if letter in "aouei" or letter in "AOUIE":
         vowels.append(letter)
 
     try:
