@@ -27,17 +27,18 @@ set_1.update(set_2)
 print(set_1)
 
 # Useful set operators
-set_3 = {1, 2, 3, 5, 6, 7}
-set_4 = {2, 4, 6, 7, 8, 9}
+set_3 = {'hi', 0, 1, 2, 3, 5, 6, 7, 9}
+set_4 = {2, 4, 6, 'sym', 7, 8, 9, 10, 'num'}
+set_5 = {0, 1, 2, 3, 'sym', 5, 8, 11}
 
 # Union
-print(set_3 | set_4)
+print(set_3 | set_4 | set_5)
 
 # Intersection
-print(set_3 & set_4)
+print(set_3 & set_4 & set_5)
 
 # Difference
-print(set_3 - set_4)
+print(set_3 - set_4 - set_5)
 
 # Symmetric difference
-print(set_3 ^ set_4)
+print(set_3 ^ set_4 ^ set_5)
