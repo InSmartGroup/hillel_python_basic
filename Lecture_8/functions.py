@@ -69,3 +69,50 @@ def while_loop_sum(numbers):
 print(while_loop_sum([72, 1, 21, 3, 8]))
 print(while_loop_sum(list(range(1, 21))))
 print(while_loop_sum(list(range(1, 101, 3))))
+
+# Exercise 3.3. A recursive function
+def recursive_sum(values: list):
+    if len(values) == 0:
+        return 0
+    else:
+        return values[0] + recursive_sum(values[1:])
+
+
+print(recursive_sum([1, 2, 3, 4, 5]))
+print(recursive_sum([1, 3, 5, 7, 9, 11]))
+
+# Exercise 4. The Fibonacci function
+def fibonacci(value):
+   sequence = []
+   num1, num2 = 0, 1
+   for i in range(1, value + 1):
+      sequence.append(i)
+      num1, num2 = num2, num1 + num2
+   return f"Sum: {num2}, sequence: {sequence}"
+
+
+print(fibonacci(14))
+print(fibonacci(17))
+
+# Exercise 5. Decorators
+def main_decorator(func_to_decor):
+    def tomato():
+        print('tomato')
+
+    def meat():
+        print('meat')
+
+    def cheese():
+        print('cheese')
+
+    def bread():
+        print('bread')
+
+    return tomato(), meat(), cheese(), bread()
+
+
+def main_func():
+    return None
+
+
+main_decorator(main_func())
